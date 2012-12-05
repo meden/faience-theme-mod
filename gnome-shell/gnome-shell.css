@@ -1045,7 +1045,7 @@ StButton.popup-menu-item:insensitive {
 
 .dash-label {
     color: #fff;
-    font: 8pt;
+    font-size: 8pt;
     padding: 8px 10px 8px 22px;
     text-align: center;
     border-image: url("assets/dash-label-ltr.svg") 22 7 7 7;
