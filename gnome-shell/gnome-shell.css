@@ -701,7 +701,9 @@ StButton.popup-menu-item:insensitive {
 
 #panelActivities {
     background-image: url("assets/activities.png");
-    background-position: 50% 0;
+    /*background-position: 50% 0;*/
+    /* assets/activities.png size: 26x16 */
+    background-position: 16px 4px;
     width: 58px;
     height: 24px;
     color: rgba(0,0,0,0.0);
