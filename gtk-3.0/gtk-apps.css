@@ -64,7 +64,7 @@ UnityPanelWidget,
 GeditWindow .pane-separator, 
 GeditWindow .pane-separator:hover {
     border-color: transparent;
-    border-image: url("../assets/gedit-pane.svg") 32 1 / 32px 1px stretch;
+    border-image: url("assets/gedit-pane.svg") 32 1 / 32px 1px stretch;
 }
 
 GeditPanel.title GtkLabel {
