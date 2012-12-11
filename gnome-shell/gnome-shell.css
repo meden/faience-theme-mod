@@ -855,7 +855,7 @@ StButton.popup-menu-item:insensitive {
 }
 
 .window-close {
-    background-image: url("assets/close-window.svg");
+    background-image: url("assets/close-window-red.svg");
     background-size: 32px;
     height: 32px;
     width: 32px;
@@ -871,7 +871,7 @@ StButton.popup-menu-item:insensitive {
      * adjust left 2px
      * adjust down 8px */
 
-    background-image: url("assets/close-notification.svg");
+    background-image: url("assets/close-notification-red.svg");
     background-size: 24px;
     height: 24px;
     width: 24px;
