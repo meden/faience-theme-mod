@@ -485,3 +485,17 @@ TerminalWindow GtkNotebook.notebook {
 TerminalWindow GtkNotebook.notebook tab {
     border-width: 5px 16px 0px 16px;
 }
+
+
+/*** Evolution ***/
+
+MessageList ETableItem {
+    background-color: #ff0000;
+    color: @theme_text_color;
+}
+
+EPreviewPane .entry {
+    background-color: @theme_base_color;
+    color: @theme_text_color;
+}
+
