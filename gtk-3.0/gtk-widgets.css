@@ -125,6 +125,11 @@ GtkWindow:backdrop {
  * arrow *
  *********/
 
+.arrow {
+    border-width: 0px;
+    border-color: transparent;
+}
+
 .arrow:insensitive {
     -unico-arrow-texture: url("assets/combobox-arrow-disabled.png");
 }
@@ -189,7 +194,7 @@ GtkAssistant .sidebar {
     -GtkWidget-focus-line-width: 0;
 
     padding: 5px;
-    /*transition: 150ms ease-in-out;*/
+    /*transition: 100ms ease-in-out;*/
     border-radius: 5px;
 }
 
@@ -607,7 +612,7 @@ row:selected:backdrop {
     border-style: none;
     margin: 1px 0;
     
-    /*transition: 150ms ease-in-out;*/
+    /*transition: 100ms ease-in-out;*/
 }
 
 GtkCheckButton:hover,
@@ -1301,12 +1306,12 @@ GtkProgressBar {
 .progressbar {
     border-radius: 8px;
     border-width: 1px;
-    /*background-image: -gtk-gradient (linear, left top, left bottom,
+    background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@theme_selected_bg_color, 1.075)),
-                                     to (shade (@theme_selected_bg_color, 0.975)));*/
-    background-color: shade (@theme_selected_bg_color, 0.70);
+                                     to (shade (@theme_selected_bg_color, 0.975)));
+/*    background-color: shade (@theme_selected_bg_color, 0.70);
     background-repeat: repeat-x;
-    /*background-size: contain;*/
+*/    /*background-size: contain;*/
     border-style: solid;
     border-color: @progressbar_border_color;
 
@@ -1314,21 +1319,29 @@ GtkProgressBar {
 }
 
 .progressbar.vertical {
-    background-repeat: repeat-y;
+    /*background-repeat: repeat-y;*/
+    background-image: -gtk-gradient (linear, left top, right top,
+                                     from (shade (@theme_selected_bg_color, 1.075)),
+                                     to (shade (@theme_selected_bg_color, 0.975)));
 }
 
-.progressbar:backdrop,
-.progressbar.vertical:backdrop {
+.progressbar:backdrop {
     border-radius: 8px;
     border-width: 1px;
-    /*background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_bg_color, 1.02)),
-                                     to (shade (@theme_bg_color, 0.96)));*/
-    background-color: shade (@theme_bg_color, 0.9);
-    border-style: solid;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@theme_bg_color, 1.075)),
+                                     to (shade (@theme_bg_color, 0.95)));
+/*    background-color: shade (@theme_bg_color, 0.9);
+*/    border-style: solid;
     border-color: @backdrop_progressbar_border_color;
 
     box-shadow: inset 0px 1px 2px 0px @highlight_color;
+}
+
+.progressbar.vertical:backdrop {
+    background-image: -gtk-gradient (linear, left top, right top,
+                                     from (shade (@theme_bg_color, 1.075)),
+                                     to (shade (@theme_bg_color, 0.95)));
 }
 
 .progressbar row,
@@ -1574,7 +1587,7 @@ GtkScale.vertical {
 
 .scale.slider {
     background-color: transparent;
-    /*transition: 150ms ease-in-out;*/
+    /*transition: 100ms ease-in-out;*/
 }
 
 .scale.trough.highlight {
@@ -1617,14 +1630,16 @@ GtkScale.mark {
     -GtkScrollbar-has-forward-stepper: 0;
     -GtkRange-slider-width: 13;
     box-shadow: none;
+    border-width: 0px;
 }
 
 .scrollbar.trough,
 .scrollbar.trough.vertical {
+    border-width: 0px;
     border-radius: 0px;
     border-color: transparent;
     background-image: none;
-    background-color: @theme_bg_color;
+    background-color: @theme_base_color;
 }
 
 .scrollbar.trough.horizontal {
@@ -1651,10 +1666,6 @@ GtkScale.mark {
                                      from (shade (@button_bg_color, 1.08)),
                                      color-stop (0.5, @button_bg_color),
                                      to (shade (@button_bg_color, 0.94)));
-    /*box-shadow: inset 1px 0 shade (@theme_bg_color, 1.1),
-                inset -1px 0 shade (@theme_bg_color, 1.01),
-                inset 0 1px shade (@theme_bg_color, 1.1),
-                inset 0 -1px shade (@theme_bg_color, 1.1);*/
 }
 
 .scrollbar.slider.horizontal,
@@ -1666,10 +1677,6 @@ GtkScale.mark {
                                      from (shade (@button_bg_color, 1.08)),
                                      color-stop (0.5, @button_bg_color),
                                      to (shade (@button_bg_color, 0.94)));
-    /*box-shadow: inset 1px 0 shade (@theme_bg_color, 1.1),
-                inset -1px 0 shade (@theme_bg_color, 1.1),
-                inset 0 1px shade (@theme_bg_color, 1.1),
-                inset 0 -1px shade (@theme_bg_color, 1.01);*/
 }
 
 .scrollbar.button,
@@ -1810,7 +1817,7 @@ GtkComboBox .menuitem.separator {
 .sidebar .view:backdrop {
     background-color: shade(@sidebar_bg_color, 1.05);
 
-    color: shade(@sidebar_fg_color, 1.5);
+    color: shade(@sidebar_fg_color, 1.25);
     text-shadow: 0 1px alpha (white, 0.2); 
 }
 
@@ -1835,7 +1842,7 @@ GtkComboBox .menuitem.separator {
     border-bottom-color: alpha (white, 0.3);
     border-style: solid;
     border-width: 1px 0 1px 0;
-    color: shade(@sidebar_fg_color, 1.5);
+    color: shade(@sidebar_fg_color, 1.25);
     text-shadow: 0 1px alpha (white, 0.2);
     font-weight: bold; 
 }
@@ -2161,7 +2168,7 @@ GtkContainer > GtkContainer > GtkContainer > GtkContainer > * > .toolbar {
     /*text-shadow: 0 -1px shade (@dark_bg_color, 0.9);*/
 }
 
-.toolbar .raised .button,
+/*.toolbar .raised .button,*/
 /*.toolbar .button:insensitive, --> Memory leak */
 .toolbar .linked .button {
     background-image: -gtk-gradient (linear, left top, left bottom,
@@ -2183,7 +2190,7 @@ GtkContainer > GtkContainer > GtkContainer > GtkContainer > * > .toolbar {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@theme_bg_color, 1.1)),
                                      to (shade (@theme_bg_color, 0.95)));
-    /*transition: 150ms ease-in-out;*/
+    /*transition: 100ms ease-in-out;*/
 }
 
 .toolbar .button:hover:backdrop,
@@ -2447,15 +2454,17 @@ GtkContainer > GtkContainer > GtkContainer > GtkContainer > * > .toolbar {
  ***********/
 GtkTootip,
 .tooltip {
-    background-image: -gtk-gradient (radial, center 0, 0, center 0, 0.8,
+	background-color: alpha (black, 0.8);
+    /*background-image: -gtk-gradient (radial, center 0, 0, center 0, 0.8,
                                      from (alpha (mix (@tooltip_bg_color, white, 0.2), 0.86)),
-                                     to (alpha (@tooltip_bg_color, 0.86)));
+                                     to (alpha (@tooltip_bg_color, 0.86)));*/
     border-color: transparent;
     border-radius: 16px;
     border-style: solid;
     border-width: 4px;
 
-    color: @tooltip_fg_color;
+    color: white;
+    padding: 0;
 }
 
 .tooltip * {

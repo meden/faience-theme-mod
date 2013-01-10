@@ -4,13 +4,20 @@ UnityPanelWidget,
 .unity-panel {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@theme_bg_color, 1.1)),
-                                     to (@toolbar_gradient_start));
+                                     to (shade (@theme_bg_color, 0.85)));
+    /*background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (green),
+                                     to (red));*/
     border-top-color: shade (@theme_bg_color, 1.4);
     border-style: solid;
     border-width: 1px 0 0 0;
 
     color: @theme_fg_color;
     text-shadow: 0 1px alpha (white, 0.3);
+
+    -unico-border-gradient: none;
+    -unico-inner-stroke-width: 0;
+    -unico-inner-stroke-color: @transparent;
 }
 
 .unity-panel.menubar,
@@ -36,6 +43,123 @@ UnityPanelWidget,
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
+}
+
+
+/*** Gnome-documents ***/
+
+.documents-dropdown,
+.documents-dropdown .view {
+    background-color: shade (@theme_bg_color, 1.02);
+}
+
+.documents-dropdown .frame {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-radius: 0 0 5px 5px;
+}
+
+.documents-dropdown .radio,
+.documents-dropdown .radio:focused,
+.documents-dropdown .radio:selected {
+    background-image: none;
+    background-color: alpha(@theme_base_color, 0.0);
+}
+
+/*.documents-dropdown .radio:active,
+.documents-dropdown .radio:active:focused,
+.documents-dropdown .radio:active:prelight {
+    background-image: url("assets/sidebar-radio-checked.svg");
+}
+
+.documents-dropdown .radio:prelight {
+    background-image: url("assets/sidebar-radio-prelight.svg");
+}
+
+.documents-dropdown .radio:active:selected,
+.documents-dropdown .radio:active:selected:focused {
+    background-image: url("assets/sidebar-radio-selected.svg");
+}
+
+.documents-dropdown .radio:selected:prelight,
+.documents-dropdown .radio:selected:focused {
+    background-image: url("assets/sidebar-radio-selected-prelight.svg");
+}*/
+
+.documents-load-more.button {
+    border-image-width: 0;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.documents-scrolledwin.frame {
+    border-width: 1px 0;
+    border-radius: 0;
+    color: @theme_fg_color;
+}
+
+.documents-scrolledwin {
+    color: @theme_fg_color;
+}
+
+@define-color entry_tag_bg #ff0000;
+@define-color entry_tag_fg #ffffff;
+ 
+.documents-icon-bg {
+    background-color: alpha (black, 0.8);
+    border-radius: 4px;
+    border-color: alpha (white, 0.1);
+    border-width: 1px;
+
+    color: white;
+}
+
+.documents-collection-icon {
+    background-color: shade (@theme_bg_color, 0.92);
+    border-radius: 4px;
+}
+
+.documents-counter {
+    background-image: url('assets/dnd-counter.svg');
+    background-size: contain;
+    background-color: transparent;
+    color: @theme_base_color;
+    font: bold;
+}
+
+.documents-favorite.button *:active,
+.documents-favorite.button *:active:hover {
+    color: shade(@theme_selected_bg_color, 1.20);
+}
+
+.documents-entry-tag {
+    background-color: @entry_tag_bg;
+    color: @entry_tag_fg;
+
+    border-radius: 4px;
+    border-width: 0;
+
+    margin: 2px;
+    padding: 4px;
+}
+
+.documents-entry-tag:hover {
+    background-color: shade(@entry_tag_bg, 1.10);
+    color: @entry_tag_fg;
+}
+
+.documents-entry-tag.button,
+.documents-entry-tag.button:hover,
+.documents-entry-tag.button:active,
+.documents-entry-tag.button:active:hover {
+    background-color: transparent;
+    background-image: none;
+    border-image: none;
+    border-width: 0;
+}
+
+.documents-entry-tag.button:hover {
+    color: shade(@entry_tag_bg, 2.10);
 }
 
 
@@ -261,8 +385,13 @@ NautilusWindow  .view.rubberband {
 
 .nautilus-canvas-item {
     border-radius: 4px;
+    background-image: none;
     background-color: @sidebar_selected_bg_color;
     color: @theme_text_color;
+}
+
+.nautilus-canvas-item:active {
+    background-color: @sidebar_selected_bg_color;
 }
 
 /* desktop mode */
@@ -353,7 +482,7 @@ NautilusFloatingBar .button {
 }
 
 NautilusWindow .pane-separator {
-    background-color: alpha (#b8c8da, 0.8);
+    background-color: alpha (shade (@sidebar_bg_color, 0.95), 0.8);
     border-color: @theme_bg_color;
     border-style: solid;
     border-width: 0;
@@ -361,14 +490,14 @@ NautilusWindow .pane-separator {
 }
 
 NautilusWindow .pane-separator:backdrop {
-    background-color: alpha (#b8c8da, 0.4);
+    background-color: alpha (shade (@sidebar_bg_color, 0.95), 0.4);
 }
 
 
 /*** Gnome Panel ***/
 
 /* Fallback Mode Panel */
-PanelWidget :backdrop,
+/*PanelWidget :backdrop,
 PanelApplet :backdrop,
 PanelToplevel :backdrop,
 PanelWidget,
@@ -464,14 +593,14 @@ ClockBox {
 
 WnckPager, WnckTasklist {
     background-color: @theme_bg_color;
-}
+}*/
 
 
 /*** Gnome Terminal ***/
 
 TerminalScreen {
     -TerminalScreen-background-darkness: 0.95;
-    background-color: #323841;
+    background-color: @terminal_bg_color;
     color: @theme_selected_fg_color;
 }
 

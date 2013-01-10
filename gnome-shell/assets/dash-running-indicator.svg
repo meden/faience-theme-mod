@@ -14,8 +14,8 @@
    height="76"
    width="76"
    version="1.1"
-   inkscape:version="0.48.2 r9819"
-   sodipodi:docname="dash-app-running.svg">
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="dash-running-indicator.svg">
   <defs
      id="defs8">
     <linearGradient
@@ -77,14 +77,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1030"
+     inkscape:window-height="1029"
      id="namedview6"
      showgrid="true"
      inkscape:zoom="6.0453785"
-     inkscape:cx="31.090411"
-     inkscape:cy="39.041368"
+     inkscape:cx="36.979207"
+     inkscape:cy="23.823131"
      inkscape:window-x="0"
-     inkscape:window-y="22"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg3647">
     <inkscape:grid
@@ -107,6 +107,18 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <g
+     id="g2999"
+     transform="matrix(1.1428555,0,0,1.7142857,-300.31964,-812.94857)"
+     style="opacity:0.2;fill:#000000;stroke:none">
+    <path
+       id="path3001"
+       style="fill:#000000;stroke:none"
+       d="m 90.446595,340.35279 -9.509254,10e-5 4.754627,-9.79483 z"
+       transform="matrix(0,0.9815,-0.71467,0,506.02,412.28)"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+  </g>
   <g
      style="fill:#000000;stroke:none;opacity:0.2"
      transform="matrix(1,0,0,1.5000001,-262.78007,-706.58005)"

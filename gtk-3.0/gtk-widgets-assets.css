@@ -5,7 +5,9 @@
 /* draw regular check and radio items using our SVG assets */
 .radio,
 .check {
-    /*background-clip: border-box;*/
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .check,
@@ -389,7 +391,7 @@ GtkSwitch.trough:active {
     background-image: url("assets/switch-on.svg");
 }
 
-.progressbar {
+/*.progressbar {
     background-image: url("assets/progressbar-horizontal.png");
 }
 
@@ -404,3 +406,4 @@ GtkSwitch.trough:active {
 .progressbar.vertical:backdrop {
     background-image: url("assets/backdrop-progressbar-vertical.png");
 }
+*/

@@ -52,6 +52,8 @@
 @define-color progressbar_border_color alpha (shade (@theme_selected_bg_color, 0.5), 0.8);
 @define-color backdrop_progressbar_border_color alpha (shade (@theme_bg_color, 0.6), 0.8);
 
+@define-color terminal_bg_color #323841;
+
 
 /* Window manager */
 @define-color wm_title @theme_fg_color;
