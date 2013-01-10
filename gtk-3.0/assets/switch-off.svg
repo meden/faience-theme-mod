@@ -10,7 +10,7 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="switch-on.svg"
+   sodipodi:docname="switch-off.svg"
    inkscape:version="0.48.3.1 r9886"
    id="svg3273"
    height="22"
@@ -25,8 +25,8 @@
      guidetolerance="10"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:window-width="1366"
-     inkscape:window-height="737"
+     inkscape:window-width="1280"
+     inkscape:window-height="968"
      id="base"
      showgrid="true"
      showguides="true"
@@ -34,10 +34,10 @@
      inkscape:showpageshadow="false"
      showborder="true"
      inkscape:zoom="11.129861"
-     inkscape:cx="30.516405"
+     inkscape:cx="29.123755"
      inkscape:cy="7.9231226"
      inkscape:window-x="0"
-     inkscape:window-y="1024"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      inkscape:snap-grids="true">
@@ -2685,7 +2685,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2715,9 +2715,9 @@
        id="text3580"
        y="12.812554"
        x="1.0296532"
-       style="font-size:7.85060500999999977px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+       style="font-size:7.85060500999999888px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;font-family:Cantarell;-inkscape-font-specification:Cantarell"
        xml:space="preserve"><tspan
-         style="font-size:7.85060500999999977px;font-weight:bold;-inkscape-font-specification:Cantarell Bold;fill:#000000"
+         style="font-size:7.85060500999999888px;font-weight:bold;-inkscape-font-specification:Cantarell Bold;fill:#333333"
          y="12.812554"
          x="1.0296532"
          id="tspan3582"
@@ -2728,9 +2728,9 @@
        id="text3584"
        y="12.812554"
        x="55.076374"
-       style="font-size:7.85060500999999977px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#999999;fill-opacity:1;stroke:none;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+       style="font-size:7.85060500999999888px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;font-family:Cantarell;-inkscape-font-specification:Cantarell"
        xml:space="preserve"><tspan
-         style="font-weight:bold;-inkscape-font-specification:Cantarell Bold;fill:#999999"
+         style="font-weight:bold;-inkscape-font-specification:Cantarell Bold;fill:#cccccc"
          y="12.812554"
          x="55.076374"
          id="tspan3586"

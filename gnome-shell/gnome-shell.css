@@ -492,7 +492,7 @@ StButton.popup-menu-item:insensitive {
 .end-session-dialog .modal-dialog-button:first-child:focus:hover:active {
     border-image: url('assets/button-active.png') 5;
 }
-/home/alessio/.local/share/themes/Faience-mod/gnome-shell/assets/toggle-off-intl.svg
+
 .end-session-dialog .modal-dialog-button:last-child {
     border-image: url('assets/button-red.png') 5;
     color: #fff;
