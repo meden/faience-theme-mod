@@ -264,6 +264,8 @@ StButton.popup-menu-item:insensitive {
 }
 
 .popup-separator-menu-item {
+    -gradient-start: transparent;
+    -gradient-end: transparent;
     background-image: url('assets/separator-horizontal.svg');
     background-repeat: repeat;
     -margin-horizontal: 0em;
@@ -682,7 +684,7 @@ StButton.popup-menu-item:insensitive {
 
 #panelActivities {
     background-image: url("assets/activities.png");
-    background-position: center top;
+    /*background-position: center top;*/
     width: 58px;
     height: 24px;
     color: rgba(0,0,0,0.0);
@@ -1020,7 +1022,7 @@ StButton.popup-menu-item:insensitive {
 
 .dash-label {
     color: #fff;
-    font: 8pt;
+    font-size: 8pt;
     padding: 8px 10px 8px 22px;
     text-align: center;
     border-image: url("assets/dash-label-ltr.svg") 22 7 7 7;
